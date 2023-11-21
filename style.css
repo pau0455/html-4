@@ -2,10 +2,8 @@
 
 .contenidor {
     z-index: 1;
-    box-sizing: border-box;
     position: relative;
     height: 400px;
-    border: black 0.1em solid;
     width: 900px;
     margin: 0 auto;
             
@@ -215,4 +213,14 @@
     left: 50px;
 }
 
-
+.hecho {
+    margin: auto;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    top: 380px;
+    left: 340px;
+    right: 0;
+    bottom: 0;
+}

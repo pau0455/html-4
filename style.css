@@ -8,7 +8,19 @@
     margin: 0 auto;
             
 }
-          
+
+
+.yaranaika img{
+    position: absolute;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    left: 50px;
+    top: 80px;
+    opacity: 100%;
+    animation: fade-inverse 10s linear 0s 1 alternate;
+}
+
 .face {
     z-index: 2;
     position: absolute;
@@ -36,7 +48,7 @@
     border-top-right-radius: 50% ;
     border: black 0.5em solid;
     width: 110px;
-    height: 110px;  
+    height: 110px; 
 }
 
 .glass1 {
@@ -44,13 +56,17 @@
     left:33px;
     right: 0;
     bottom: 60px;
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate;
 }
 
 .glass2 {
     top: 50px;
     left: 160px;
     right: 0;
-    bottom: 0;    
+    bottom: 0; 
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate;
 }
 
 .glass-ctr {
@@ -63,6 +79,8 @@
     height: 10px;
     background-color: black;
     width: 24px;
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate;
 }
 
 .eye {
@@ -107,6 +125,8 @@
     left: 77px;
     right: 0;
     bottom: 0;
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate;
 }
 
 .diente {
@@ -123,6 +143,8 @@
     left: 38px;
     right: 0;
     bottom: 0;
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate
 }
 
 .diente2 {
@@ -131,6 +153,8 @@
     left: 75px;
     right: 0;
     bottom: 0;
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate;
 }
 
 .diente-mid {
@@ -141,8 +165,10 @@
     bottom: 0;
     position: absolute;
     background-color: #654514;
-    width: 23px;
+    width: 10px;
     height: 37px;
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate;
 }
 
 .hand {
@@ -154,11 +180,26 @@
     left: 300px;
     right: 0;
     bottom: 0;
+    animation: hand-a 10s linear 0s 1 alternate;
+    animation: hand-b 0.001s linear 10s infinite alternate;
 }
+
+@keyframes hand-a {
+    0%   {rotate:0deg;}
+    25% {rotate: -10deg;}
+    50%   {rotate:0deg;}
+    75% {rotate: -10deg;}
+    100%   {rotate:0deg;}
+  }
+
+  @keyframes hand-b {
+    0%   {top: 0px;}
+    100% {top: 10px;}
+  }
 
 .fingers {
     position: absolute;
-    z-index: 5;
+    z-index: 9;
     border-bottom-right-radius: 30% ;
     border-bottom-left-radius: 30% ;
     border-top-left-radius: 30% ;
@@ -168,7 +209,7 @@
 }
 
 .palm {
-    z-index: 4;
+    z-index: 8;
     position: absolute;
     top: 100px;
     background-color: #ffcd4c;
@@ -223,4 +264,50 @@
     left: 340px;
     right: 0;
     bottom: 0;
+    opacity: 0%;
+    animation: fade 10s linear 0s 1 alternate;
+}
+
+.hecho2 {
+    margin: auto;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    top: 380px;
+    left: 340px;
+    right: 0;
+    bottom: 0;
+    opacity: 100%;
+    animation: fade-inverse 10s linear 0s 1 alternate;
+}
+
+@keyframes fade{
+
+0%{
+    opacity: 100% ;
+}
+
+99% {
+    opacity: 100%;
+}
+
+100% {
+    opacity: 0% ;
+}
+}
+
+@keyframes fade-inverse{
+
+    0%{
+        opacity: 0% ;
+    }
+    
+    99% {
+        opacity: 0%;
+    }
+    
+    100% {
+        opacity: 100% ;
+    }
 }

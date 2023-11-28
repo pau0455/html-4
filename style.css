@@ -12,11 +12,24 @@
 
 .yaranaika img{
     position: absolute;
+    z-index: 100;
     margin: auto;
     height: 200px;
     width: 200px;
-    left: 50px;
-    top: 80px;
+    left: 25px;
+    top: 25px;
+    opacity: 100%;
+    animation: fade-inverse 10s linear 0s 1 alternate;
+}
+
+.yaranaika{
+    position: absolute;
+    margin: auto;
+    z-index: 100;
+    height: 200px;
+    width: 200px;
+    left: 25px;
+    top: 25px;
     opacity: 100%;
     animation: fade-inverse 10s linear 0s 1 alternate;
 }
@@ -181,7 +194,6 @@
     right: 0;
     bottom: 0;
     animation: hand-a 10s linear 0s 1 alternate;
-    animation: hand-b 0.001s linear 10s infinite alternate;
 }
 
 @keyframes hand-a {
@@ -192,9 +204,13 @@
     100%   {rotate:0deg;}
   }
 
-  @keyframes hand-b {
-    0%   {top: 0px;}
-    100% {top: 10px;}
+  @keyframes punch {
+    0%   {height: 120px;}
+    0.0000000000000001% {height: 80px;}
+    0.0000000000000002% {top: 60px;}
+    99% {height: 80px;}
+    99.99% {top: 60px;}
+    100% {top: 80px;}
   }
 
 .fingers {
@@ -244,6 +260,7 @@
     height: 120px;
     width: 30px;
     left: 90px;
+    animation: punch 99s linear 10s 1 alternate;
 }
 
 .finger5 {
@@ -282,6 +299,89 @@
     animation: fade-inverse 10s linear 0s 1 alternate;
 }
 
+.overflow {
+    background-color: transparent;
+    position: absolute;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500em;
+    height: 500em;
+    overflow: hidden;
+  }
+  
+
+  .message {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  .message:nth-child(1) {
+    animation-delay: 13s;
+  }
+
+  .message:nth-child(2) {
+    animation-delay: 14s;
+  }
+
+  .message:nth-child(3) {
+    animation-delay: 15s;
+  }
+
+  .message:nth-child(4) {
+    animation-delay: 16s;
+  }
+
+  .message:nth-child(5) {
+    animation-delay: 17s;
+  }
+
+  .message:nth-child(6) {
+    animation-delay: 18s;
+  }
+
+  .message:nth-child(7) {
+    animation-delay: 20s;
+  }
+  .message:nth-child(8) {
+    animation-delay: 21s;
+  }
+  .message:nth-child(9) {
+    animation-delay: 22s;
+  }
+  .message:nth-child(10) {
+    animation-delay: 24s;
+  }
+  .message:nth-child(11) {
+    animation-delay: 25s;
+  }
+  .message:nth-child(12) {
+    animation-delay: 26s;
+  }
+  .message:nth-child(13) {
+    animation-delay: 27s;
+  }
+  .message:nth-child(14) {
+    animation-delay: 28s;
+  }
+  .message:nth-child(15) {
+    animation-delay: 29s;
+  }
+  .message:nth-child(16) {
+    animation-delay: 30s;
+  }
+    .message:nth-child(17) {
+    animation-delay: 32s;
+  }
+  .message:nth-child(18) {
+    animation-delay: 33s;
+  }
+  .message:nth-child(19) {
+    animation-delay: 34s;
+  }
+  
 @keyframes fade{
 
 0%{
@@ -311,3 +411,44 @@
         opacity: 100% ;
     }
 }
+
+@keyframes ifade{
+
+    0%{
+        opacity: 100% ;
+    }
+    
+    99% {
+        opacity: 100%;
+    }
+    
+    100% {
+        opacity: 0% ;
+    }
+    }
+    
+@keyframes ifade-inverse{
+    
+     0%{
+            opacity: 0% ;
+      }
+        
+     99% {
+            opacity: 0%;
+      }
+        
+      100% {
+            opacity: 100% ;
+     }
+}
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

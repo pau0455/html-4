@@ -194,6 +194,7 @@
     right: 0;
     bottom: 0;
     animation: hand-a 10s linear 0s 1 alternate;
+
 }
 
 @keyframes hand-a {
@@ -307,6 +308,7 @@
     width: 500em;
     height: 500em;
     overflow: hidden;
+    animation: shake 0.001s linear 0s infinite alternate;
   }
   
 
@@ -452,3 +454,12 @@
       transform: translateX(0);
     }
   }
+
+  @keyframes shake {
+    0% { transform: skewY(-15deg); }
+    5% { transform: skewY(15deg); }
+    10% { transform: skewY(-15deg); }
+    15% { transform: skewY(15deg); }
+    20% { transform: skewY(0deg); }
+    100% { transform: skewY(0deg); }
+   }

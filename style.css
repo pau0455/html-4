@@ -293,7 +293,7 @@
     font-size: 50px;
     font-weight: bolder;
     top: 380px;
-    left: 340px;
+    left: 240px;
     right: 0;
     bottom: 0;
     opacity: 100%;
@@ -308,7 +308,7 @@
     width: 500em;
     height: 500em;
     overflow: hidden;
-    animation: shake 0.001s linear 0s infinite alternate;
+    animation: shake 1s linear 13s infinite alternate;
   }
   
 
@@ -382,6 +382,27 @@
   }
   .message:nth-child(19) {
     animation-delay: 34s;
+  }
+  .message:nth-child(20) {
+    animation-delay: 35s;
+  }
+  .message:nth-child(21) {
+    animation-delay: 36s;
+  }
+  .message:nth-child(22) {
+    animation-delay: 37s;
+  }
+  .message:nth-child(23) {
+    animation-delay: 38s;
+  }
+  .message:nth-child(24) {
+    animation-delay: 39s;
+  }
+  .message:nth-child(25) {
+    animation-delay: 40s;
+  }
+  .message:nth-child(26) {
+    animation-delay: 41s;
   }
   
 @keyframes fade{
@@ -457,9 +478,9 @@
 
   @keyframes shake {
     0% { transform: skewY(-15deg); }
-    5% { transform: skewY(15deg); }
-    10% { transform: skewY(-15deg); }
-    15% { transform: skewY(15deg); }
-    20% { transform: skewY(0deg); }
+    20% { transform: skewY(15deg); }
+    40% { transform: skewY(-15deg); }
+    60% { transform: skewY(15deg); }
+    80% { transform: skewY(0deg); }
     100% { transform: skewY(0deg); }
    }
